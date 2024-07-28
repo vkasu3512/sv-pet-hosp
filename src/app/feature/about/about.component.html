@@ -1,0 +1,95 @@
+<ng-container>
+  <app-page-header [heading]="heading" [subHeading]="subHeading"></app-page-header>
+</ng-container>
+
+<section id="about" class="about sections-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Welcome to {{ appName }}</h2>
+    </div>
+    
+    <div>
+      Parent Data (Behaviour Subject): {{ displayMessage }}
+      Parent Data (Subject): {{ displayMessage1 }}
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-6">
+        <img src="assets/img/whoweare.jpg" class="img-fluid rounded-4" alt="">
+      </div>
+      <div class="col-lg-6">
+        <div class="content ps-0 ps-lg-5">
+          <h3 class="page-heading">Who We Are</h3>
+          <p>
+            <strong>{{ appName }}</strong> started as an individual clinic in the year 2018. When you are
+            looking for a veterinary care clinic you should be able to count on superior care and excellent service.
+          </p>
+
+          <p>
+            We are an expert in taking care for pets and bring you the best
+            possible healthcare for your pet. We have a state of the art veterinary facility which is clean,
+            comfortable, and efficient.
+          </p>
+
+          <p>
+            Our expert team of doctors and para-veterinary staff are genuine animal lovers, and they take utmost care to
+            handle different animals that come into our clinic every day. Our deep love for animals drives us to do our
+            very best for every pet and their family.
+          </p>
+
+          <p>
+            Our clinic strives to provide high quality with a caring atmosphere for your
+            pets, as we believe animal care is an integral part of the veterinary practice.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gy-4 mt-4">
+      <div class="col-lg-6">
+        <div class="content ps-0 ps-lg-5">
+          <h3 class="page-heading">We Care Your Pets With Great Love</h3>
+          <p>
+            We strongly believe in the use of scientifically advanced treatment methods in veterinary medicine for the
+            welfare and benefits of the animals.
+          </p>
+
+          <p>
+            We are professionally trained to
+            administer the advanced treatments on your companions while ensuring the pet's wellbeing and safety.
+          </p>
+
+          <p>
+            <strong>{{ appName }}</strong> is proud to contribute to the health and well-being of Addanki's
+            pets by delivering quality care in our clinic. It has been a life's calling for us to make sure animals are
+            healthy and their guardians happy.
+          </p>
+
+          <p>
+            We derive great satisfaction from helping the pets be healthy.
+          </p>
+        </div>
+
+      </div>
+      <div class="col-lg-6">
+        <img src="assets/img/whoweare-petcare.png" class="img-fluid rounded-4" alt="">
+      </div>
+    </div>
+
+    <div class="row gy-4 mt-5">
+      <h3 class="page-heading text-center">Our Mission & Vision</h3>
+      <div class="col-xl-3 col-md-6" *ngFor="let item of items">
+        <div class="item-card">
+          <div class="icon"><fa-icon [icon]="item.icon"></fa-icon></div>
+          <p>
+            <fa-icon [icon]="quoLeftIcon" class="bi bi-quote quote-icon-left"></fa-icon>
+            {{ item.desc }}
+            <fa-icon [icon]="quoLeftIcon" class="bi bi-quote quote-icon-right"></fa-icon>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

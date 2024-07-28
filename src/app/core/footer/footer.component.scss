@@ -1,0 +1,72 @@
+@import "../../../scss/variables"; // Variables
+
+.working-hours {
+    // padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: #008d7d;
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+
+    h5 {
+        margin-left: 10px;
+    }
+
+    .card-header {
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+        .icon fa-icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    .card-open {
+        background: $colorBackground;;
+        color: $colorPrimary;
+        padding: 10px 0;
+        font-weight: 500;
+    }
+
+    ul.list-group {
+        padding: 15px;
+    }
+
+    li.list-group-item {
+        background: transparent;
+        color: $colorOnPrimary;
+        border-color: $colorOnPrimary;
+    }
+}
+
+.footer-links ul a {
+    color: $colorOnPrimary;
+}
+
+a.social-contact {
+    color: $colorOnPrimary;
+
+    & :hover {
+        color: $colorOnPrimary;
+    }
+}
+
+// Complete mobile view
+@media (max-width: 575px) {
+    .footer-info {
+        text-align: center !important;
+
+        a {
+            justify-content: center !important;
+        }
+
+        .social-links {
+            justify-content: center !important;
+        }
+    }
+}

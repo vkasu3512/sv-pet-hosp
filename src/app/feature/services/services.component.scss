@@ -1,0 +1,21 @@
+@import "../../../scss/variables"; // Variables
+
+.service-item:hover {
+    .icon:before {
+        background: transparent !important;
+    }
+
+    .icon fa-icon {
+        color: #00b6a1;
+    }
+}
+
+.service-item .icon:before {
+    background: transparent !important;
+}
+
+.icon {
+    fa-icon {
+        color: $colorSecondary;
+    }
+}

@@ -1,0 +1,87 @@
+<ng-container>
+  <app-page-header [heading]="heading" [subHeading]="subHeading"></app-page-header>
+</ng-container>
+<section id="contact" class="contact sections-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>Please feel free to contact me on <strong>{{ supportContact }}</strong> in case of any emergency 24X7. Stay
+        Healthy!</p>
+    </div>
+
+    <div>
+      <input type="text" [(ngModel)]="typeMessage">
+      <button type="button" (click)="sendMessage()">Set Message</button>
+     B.S. {{ displayMessage }}
+     S. {{ displayMessage1 }}
+    </div>
+
+    <div class="row gx-lg-0 gy-4">
+      <div class="col-lg-4">
+
+        <div class="info-container d-flex flex-column align-items-center justify-content-center">
+          <div class="info-item d-flex">
+            <i class="bi bi-geo-alt flex-shrink-0">
+              <fa-icon [icon]="locationIcon"></fa-icon>
+            </i>
+            <div>
+              <h4>Location:</h4>
+              <p>Opposite to Bank of Baroda,
+                Ramnagar, Addanki.</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex">
+            <i class="bi bi-envelope flex-shrink-0">
+              <fa-icon [icon]="mailIcon"></fa-icon>
+            </i>
+            <div>
+              <h4>Email:</h4>
+              <a href="mailto:{{supportEmail}}" class="social-contact">{{ supportEmail }}</a>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex">
+            <i class="bi bi-phone flex-shrink-0">
+              <fa-icon [icon]="mobileIcon"></fa-icon>
+            </i>
+            <div>
+              <h4>Call:</h4>
+              <a href="tel:{{supportContact}}" class="social-contact">{{ supportContact }}</a>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex">
+            <i class="bi bi-clock flex-shrink-0">
+              <fa-icon [icon]="hoursIcon"></fa-icon>
+            </i>
+            <div>
+              <h4>Open Hours:</h4>
+              <p>Mon-Sat: <strong>5PM - 8PM</strong> | Sunday : <strong>9AM - 1PM</strong></p>
+              <p></p>
+            </div>
+          </div><!-- End Info Item -->
+        </div>
+
+      </div>
+      <div class="col-lg-8">
+        <div class="contact-page-form">
+          <app-contact-form></app-contact-form>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header locate-heading">
+      <h2>Locate Us</h2>
+    </div>
+
+    <div class="row gx-lg-0 gy-4">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1628.1581470045974!2d79.97686778109802!3d15.80264388021238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4af1f3b5b48b91%3A0x70f5ed24097ffa78!2sS%20V%20PET%20HOSPITAL!5e0!3m2!1sen!2sus!4v1685837770938!5m2!1sen!2sus"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->

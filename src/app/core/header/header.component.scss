@@ -1,0 +1,9 @@
+@import "../../../scss/variables"; // Variables
+
+a.social-contact {
+    color: $colorOnPrimary;
+
+    & :hover {
+        color: $colorOnPrimary;
+    }
+}

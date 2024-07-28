@@ -1,0 +1,24 @@
+<ng-container>
+  <app-page-header [heading]="heading" [subHeading]="subHeading"></app-page-header>
+</ng-container>
+<section id="services" class="services sections-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="col-lg-4 col-md-6" *ngFor="let item of items">
+        <div class="service-item  position-relative">
+          <div class="icon">
+            <i class="bi bi-activity">
+              <fa-icon [icon]="item.icon"></fa-icon>
+            </i>
+          </div>
+          <h3>{{ item.service }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Our Services Section -->

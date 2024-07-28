@@ -1,0 +1,19 @@
+@import "../../../scss/variables";
+
+.page-header {
+    padding: 30px 0;
+    min-height: 20vh;
+    position: relative;
+    background-color: $colorPrimary;
+
+    h2 {
+        font-size: 56px;
+        font-weight: 500;
+        color: $colorOnPrimary;
+        font-family: $fontSecondary;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}

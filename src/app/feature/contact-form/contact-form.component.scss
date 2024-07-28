@@ -1,0 +1,36 @@
+@import "../../../scss/variables"; // Variables
+
+.contact-form {
+    .form-group {
+        padding-bottom: 8px;
+
+        span {
+            font-size: 0.8rem;
+        }
+    }
+
+    input[type=text],
+    input[type=number],
+    textarea {
+        padding: 12px 15px;
+        font-size: 16px;
+
+        &:focus {
+            font-size: 16px;
+            border-color: $colorPrimary;
+            box-shadow: 0 0 0 0.25rem rgb(0 146 130 / 22%);
+        }
+    }
+
+    .btn-outline-primary {
+        background: $colorPrimary;
+        border: 0;
+        padding: 14px 45px;
+        color: $colorOnPrimary;
+        border-radius: 50px;
+
+        &:hover {
+            background: rgba(0, 131, 116, 0.8);
+        }
+    }
+}

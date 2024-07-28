@@ -1,0 +1,72 @@
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-6 col-md-12 footer-info">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <span>{{ appName }}</span>
+                </a>
+                <p [innerHTML]="supportAddress"></p>
+                <p>
+                    <strong>Phone:</strong>&nbsp;
+                    <a href="tel:{{supportContact}}" class="social-contact ms-2">{{ supportContact }}</a><br>
+                    <strong>Email:</strong>&nbsp;
+                    <a href="mailto:{{supportEmail}}" class="social-contact ms-2">{{ supportEmail }}</a><br>
+
+                </p>
+                <div class="social-links d-flex mt-4">
+                    <a href="#" class="twitter"><fa-icon [icon]="twitterIcon"></fa-icon></a>
+                    <a href="#" class="facebook"><fa-icon [icon]="fbIcon"></fa-icon></a>
+                    <a href="#" class="instagram"><fa-icon [icon]="instaIcon"></fa-icon></a>
+                    <a href="https://wa.me/{{waContact}}" target="__blank" class="whatsapp"><fa-icon
+                            [icon]="waIcon"></fa-icon></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 footer-links" *ngFor="let item of footerWorkingHours">
+                <div class="working-hours">
+                    <div class="d-flex justify-content-center align-items-baseline card-header">
+                        <div class="icon"><fa-icon [icon]="item.icon"></fa-icon></div>
+                        <h5>{{ item.title }}</h5>
+                    </div>
+                    <div class="card-open">
+                        <span class="font-weight-bold">We are open</span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <div>{{ item.section1 }}</div>
+                            <div>{{ item.section2 }}</div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <div>{{ item.section3 }}</div>
+                            <div *ngIf="item.section3 !== 'Contact' else medStoreContact">{{ item.section4 }}</div>
+                            <ng-template #medStoreContact>
+                                <div>
+                                    <a href="tel:{{item.section4}}" class="social-contact">{{ item.section4 }}</a>
+                                </div>
+                            </ng-template>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="copyright">
+            Copyright &copy; {{ currentDate | date : 'yyyy' }} <strong><span>{{ appName }}</span></strong>. All Rights
+            Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+            Designed & Developed by <strong>Pavan-Poonam</strong>
+        </div>
+    </div>
+
+</footer><!-- End Footer -->
+<!-- End Footer -->
