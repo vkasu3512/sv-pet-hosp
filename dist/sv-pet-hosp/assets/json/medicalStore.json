@@ -1,0 +1,26 @@
+[
+    {
+        "imageUrl": "assets/img/medical-store/Medical-1.jpeg",
+        "heading": "Medical Store"
+    },
+    {
+        "imageUrl": "assets/img/medical-store/Medical-2.jpeg",
+        "heading": "Owner"
+    },
+    {
+        "imageUrl": "assets/img/medical-store/Medical-3.jpeg",
+        "heading": "Medicine - Section 1"
+    },
+    {
+        "imageUrl": "assets/img/medical-store/Medical-4.jpeg",
+        "heading": "Medicine - Section 2"
+    },
+    {
+        "imageUrl": "assets/img/medical-store/Medical-5.jpeg",
+        "heading": "Medicine - Section 3"
+    },
+    {
+        "imageUrl": "assets/img/medical-store/Medical-6.jpeg",
+        "heading": "Pet Accessories"
+    }
+]
