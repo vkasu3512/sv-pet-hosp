@@ -1,0 +1,127 @@
+@import "./../scss/_variables"; // Variables
+
+.loader {
+    height: 100vh;
+    background: $colorPrimary;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    animation: fadeOut 2s ease-out both;
+
+    img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+a.scroll-top {
+    transition: 0.3s;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: $colorWhatsapp;
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
+}
+
+.dot-floating {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $colorSecondary;
+    color: $colorSecondary;
+    animation: dot-floating 2s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
+}
+
+.dot-floating::before,
+.dot-floating::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.dot-floating::before {
+    left: -12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $colorSecondary;
+    color: $colorSecondary;
+    animation: dot-floating-before 2s infinite ease-in-out;
+}
+
+.dot-floating::after {
+    left: -24px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $colorSecondary;
+    color: $colorSecondary;
+    animation: dot-floating-after 2s infinite cubic-bezier(0.4, 0, 1, 1);
+}
+
+@keyframes dot-floating {
+    0% {
+        left: calc(-50% - 5px);
+    }
+
+    75% {
+        left: calc(50% + 105px);
+    }
+
+    100% {
+        left: calc(50% + 105px);
+    }
+}
+
+@keyframes dot-floating-before {
+    0% {
+        left: -50px;
+    }
+
+    50% {
+        left: -12px;
+    }
+
+    75% {
+        left: -50px;
+    }
+
+    100% {
+        left: -50px;
+    }
+}
+
+@keyframes dot-floating-after {
+    0% {
+        left: -100px;
+    }
+
+    50% {
+        left: -24px;
+    }
+
+    75% {
+        left: -100px;
+    }
+
+    100% {
+        left: -100px;
+    }
+}

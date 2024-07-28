@@ -1,0 +1,19 @@
+<ng-container *ngIf="!isLoading">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+
+    <!--Shared whats app icon-->
+    <a href="https://wa.me/{{waContact}}" target="__blank"
+        class="scroll-top d-flex align-items-center justify-content-center">
+        <fa-icon [icon]="waIcon" class="bi bi-arrow-up-short"></fa-icon>
+    </a>
+</ng-container>
+
+<!--App loader-->
+<ng-container *ngIf="isLoading">
+    <div class="loader">
+        <img src="assets/img/loader.png" />
+        <div class="dot-floating"></div>
+    </div>
+</ng-container>
